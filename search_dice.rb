@@ -5,7 +5,7 @@ require_relative './locator.rb'
 get '/' do
   locator = Locator.new(request.ip)
   @location = locator.location
-  # erb :index
+  erb :index
 end
 
 post '/' do
