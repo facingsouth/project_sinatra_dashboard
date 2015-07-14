@@ -41,7 +41,7 @@ class DiceScraper
     @page_num = 1
     # While there are results on the page (and they aren't too old)
     while (page.search(".serp-result-content").search('.dice-btn-link').any? && inside_duration)
-      p "Getting url #{nav_url}"
+      # p "Getting url #{nav_url}"
       listings.each do |listing|
 
         info = generate_info(listing)

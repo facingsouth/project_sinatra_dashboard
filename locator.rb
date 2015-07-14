@@ -16,6 +16,7 @@ class Locator
     city = response["city"] || ""
     region_code = response["region_code"] || ""
     country_code = response["country_code"] || ""
+    return "" if [city, region_code, country_code].all? {|w| w.empty?}
     [city, region_code, country_code].join(", ")
   end
 
