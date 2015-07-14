@@ -1,0 +1,24 @@
+<%= erb :"index" %>
+
+<hr>
+
+<table class="table table-hover">
+  <tr>
+    <td>Job title</td>
+    <td>Job ID</td> 
+    <td>Company name</td>
+    <td>Company ID</td>
+    <td>Location</td> 
+    <td>Posting date</td>
+  </tr>
+  <% info.each do |entry|%>
+    <tr>
+      <td><a href=<%= entry[:link]%>> <%=entry[:title]%> </a></td>
+      <td> <%=entry[:jid]%> </td> 
+      <td> <%=entry[:cname]%> </td>
+      <td> <%=entry[:cid]%> </td>
+      <td> <%=entry[:loc]%> </td> 
+      <td> <%=entry[:date]%> </td>
+    </tr>
+  <% end %>
+</table>

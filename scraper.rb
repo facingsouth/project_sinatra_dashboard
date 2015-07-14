@@ -16,14 +16,15 @@ class DiceScraper
     @duration = duration
     @url = formatted_url(query, location)
     parse_page(nav_url)
-    append_to_file(@info_array)
+    # append_to_file(@info_array)
+    @info_array
   end
 
 
   def formatted_url(query, location)
     query = query.gsub(" ", "+").gsub(",", "%2C")
     location = location.gsub(" ", "+").gsub(",", "%2C")
-    return "https://www.dice.com/jobs/q-#{query}-l-#{location}-radius-5-sort-date-limit-120"
+    return "https://www.dice.com/jobs/q-#{query}-l-#{location}-radius-30-sort-date-limit-120"
   end
 
   def nav_url
