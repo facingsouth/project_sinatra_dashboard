@@ -1,2 +1,2 @@
-require './hello'
+require './search_dice'
 run Sinatra::Application
