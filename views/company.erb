@@ -1,0 +1,19 @@
+<h2> <a href=<%= profile["website"]%>> <%= profile["name"] %> </a></h2>
+
+<table class="table table-hover">
+  <tr>
+    <td>Industry</td>
+    <td>Number of Ratings</td> 
+    <td>Overall Rating</td>
+    <td>Rating Description</td>
+    <td>Featured Review</td>
+  </tr>
+
+  <tr>
+    <td> <%=profile["industry"]%> </td>
+    <td> <%=profile["numberOfRatings"]%> </td> 
+    <td> <%=profile["overallRating"]%> </td>
+    <td> <%=profile["ratingDescription"]%> </td>
+    <td> <%=profile["featuredReview"]%> </td>
+  </tr>
+</table>

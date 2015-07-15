@@ -2,6 +2,8 @@
 
 <hr>
 
+<h2><%= query %> jobs in <%= location %>.</h2>
+
 <table class="table table-hover">
   <tr>
     <td>Job title</td>
@@ -15,7 +17,7 @@
     <tr>
       <td><a href=<%= entry[:link]%>> <%=entry[:title]%> </a></td>
       <td> <%=entry[:jid]%> </td> 
-      <td> <%=entry[:cname]%> </td>
+      <td><a href="/<%=entry[:cname]%>"> <%=entry[:cname]%> </a></td>
       <td> <%=entry[:cid]%> </td>
       <td> <%=entry[:loc]%> </td> 
       <td> <%=entry[:date]%> </td>
