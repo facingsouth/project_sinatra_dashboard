@@ -7,18 +7,18 @@ require_relative './company_profiler.rb'
 enable :sessions
 
 get '/' do
-  locator = Locator.new("67.160.204.113") #(request.ip)
-  session["ip"] = "67.160.204.113" #request.ip
+  locator = Locator.new(request.ip) #(request.ip)
+  session["ip"] = request.ip #request.ip
   session["location"] = locator.location
   erb :index
 end
 
 post '/' do
   query = params[:query]
-  location = params[:location]
+  # location = params[:location]
   duration = params[:duration].to_i
   scraper = DiceScraper.new
-  info = scraper.search_jobs(query, location, duration)
+  info = scraper.search_jobs(query, session["location"], duration)
   erb :result, :locals => {:info => info, 
                            :query => query.upcase, 
                            :location => session["location"]}

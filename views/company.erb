@@ -1,19 +1,64 @@
-<h2> <a href=<%= profile["website"]%>> <%= profile["name"] %> </a></h2>
+<h2> <a href=<%= "http://" + profile["website"]%>> <%= profile["name"] %> </a></h2>
 
 <table class="table table-hover">
   <tr>
     <td>Industry</td>
-    <td>Number of Ratings</td> 
-    <td>Overall Rating</td>
-    <td>Rating Description</td>
-    <td>Featured Review</td>
+    <td> <%=profile["industry"]%> </td>
   </tr>
 
   <tr>
-    <td> <%=profile["industry"]%> </td>
+    <td>Number of Ratings</td> 
     <td> <%=profile["numberOfRatings"]%> </td> 
-    <td> <%=profile["overallRating"]%> </td>
-    <td> <%=profile["ratingDescription"]%> </td>
-    <td> <%=profile["featuredReview"]%> </td>
   </tr>
+
+  <tr>
+    <td>Overall Rating</td>
+    <td> <%=profile["overallRating"]%> </td>
+  </tr>
+
+  <tr>
+    <td>Rating Description</td>
+    <td> <%=profile["ratingDescription"]%> </td>
+  </tr>
+
+  <tr>
+    <td>Featured Review (pros)</td>
+    <td> <%=profile["featuredReview"]["pros"]%> </td>
+  </tr>
+
+  <tr>
+    <td>Featured Review (cons)</td>
+    <td> <%=profile["featuredReview"]["cons"]%> </td>
+  </tr>
+
+  </tr>
+    <td>Culture and Values Rating</td>
+    <td> <%=profile["cultureAndValuesRating"]%> </td>
+  </tr>
+
+  </tr>
+    <td>Senior Leadership Rating</td>
+    <td> <%=profile["seniorLeadershipRating"]%> </td>
+  </tr>
+
+  </tr>
+    <td>Compensation and Benefits Rating</td>
+    <td> <%=profile["compensationAndBenefitsRating"]%> </td>
+  </tr>
+
+  </tr>
+    <td>Career Opportunities Rating</td>
+    <td> <%=profile["careerOpportunitiesRating"]%> </td>
+  </tr>
+
+  </tr>
+    <td>Work Life Balance Rating</td>
+    <td> <%=profile["workLifeBalanceRating"]%> </td>
+  </tr>
+
+  </tr>
+    <td>Recommend to Friend Rating</td>
+    <td> <%=profile["recommendToFriendRating"]%> </td>
+  </tr>
+
 </table>
